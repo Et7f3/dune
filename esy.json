@@ -1,0 +1,34 @@
+{
+  "esy": {
+    "build": [
+      [ "ocaml", "bootstrap.ml" ],
+      [ "./dune.exe", "build", "-p", "dune", "--profile", "dune-bootstrap" ]
+    ]
+  },
+  "scripts": {
+    "test": "#{self.bin / 'dune.exe'} runtest",
+    "doc": "make doc"
+  },
+  "devDependencies": {
+    "@opam/bisect_ppx": "*",
+    "@opam/cinaps": "*",
+    "@opam/coq": "*",
+    "@opam/core_bench": "*",
+    "@opam/csexp": ">=1.3.0",
+    "@opam/js_of_ocaml-compiler": "*",
+    "@opam/js_of_ocaml-ppx": "*",
+    "@opam/mdx": "1.7.0",
+    "@opam/menhir": "*",
+    "@opam/merlin": "*",
+    "@opam/ocaml-migrate-parsetree": "*",
+    "@opam/ocamlfind": "*",
+    "@opam/ocamlformat": "0.14.3",
+    "@opam/odoc": ">1.5.0",
+    "@opam/ppx_expect": ">=v0.14",
+    "@opam/ppx_inline_test": "*",
+    "@opam/ppxlib": "0.13.0",
+    "@opam/result": "*",
+    "@opam/utop": ">=2.6.0"
+  },
+  "dependencies": { "ocaml": "<4.11" }
+}
