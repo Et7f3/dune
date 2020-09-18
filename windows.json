@@ -4,15 +4,18 @@
       "cp -r #{self.root}/boot #{self.target_dir}",
       "cp -r #{self.root}/vendor #{self.target_dir}",
       "cp -r #{self.root}/src #{self.target_dir}",
+      "cp -r #{self.root}/test #{self.target_dir}",
       "cp -r #{self.root}/otherlibs #{self.target_dir}",
       "cp -r #{self.root}/bin #{self.target_dir}",
+      "cp -r #{self.root}/dune #{self.target_dir}",
       "cp -r #{self.root}/dune-project #{self.target_dir}",
+      "cp -r #{self.root}/dune-private-libs.opam.template #{self.target_dir}",
       [ "ocaml", "bootstrap.ml" ],
       [ "#{self.target_dir / 'dune.exe'}", "build", "--root", "#{self.target_dir}", "--ignore-promoted-rules", "--no-config", "--always-show-command-line", "--promote-install-files", "--default-target", "@install", "--only-packages", "dune", "--profile", "dune-bootstrap" ]
     ]
   },
   "scripts": {
-    "test": "echo #{self.bin / 'dune.exe'} build @runtest-windows",
+    "test": "#{self.target_dir / 'dune.exe'} build @runtest-windows",
     "doc": "echo make doc"
   },
   "devDependencies": {
