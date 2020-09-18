@@ -3,8 +3,11 @@
     "build": [
       "cp -r #{self.root}/boot #{self.target_dir}/boot",
       "cp -r #{self.root}/vendor #{self.target_dir}/vendor",
+      "cp -r #{self.root}/src #{self.target_dir}/src",
+      "cp -r #{self.root}/otherlibs #{self.target_dir}/otherlibs",
+      "cp -r #{self.root}/bin #{self.target_dir}/bin",
       [ "ocaml", "bootstrap.ml" ],
-      [ "./dune.exe", "build", "-p", "dune", "--profile", "dune-bootstrap" ]
+      [ "#{self.target_dir / 'dune.exe'}", "build", "-p", "dune", "--profile", "dune-bootstrap" ]
     ]
   },
   "scripts": {
