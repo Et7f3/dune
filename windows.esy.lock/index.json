@@ -1,23 +1,7 @@
 {
   "checksum": "c3a210d33a7a830c4017f0abfa93decf",
-  "root": "windows@link-dev:./windows.json",
+  "root": "dune@link-dev:./esy.json",
   "node": {
-    "windows@link-dev:./windows.json": {
-      "id": "windows@link-dev:./windows.json",
-      "name": "windows",
-      "version": "link-dev:./windows.json",
-      "source": {
-        "type": "link-dev",
-        "path": ".",
-        "manifest": "windows.json"
-      },
-      "overrides": [],
-      "dependencies": [ "ocaml@4.10.1002@d41d8cd9" ],
-      "devDependencies": [
-        "@opam/result@opam:1.5@6b753c82", "@opam/odoc@opam:1.5.1@52a58c0b",
-        "@opam/csexp@opam:1.3.2@5cea14af"
-      ]
-    },
     "ocaml@4.10.1002@d41d8cd9": {
       "id": "ocaml@4.10.1002@d41d8cd9",
       "name": "ocaml",
@@ -32,6 +16,18 @@
       "dependencies": [],
       "devDependencies": []
     },
+    "dune@link-dev:./esy.json": {
+      "id": "dune@link-dev:./esy.json",
+      "name": "dune",
+      "version": "link-dev:./esy.json",
+      "source": { "type": "link-dev", "path": ".", "manifest": "esy.json" },
+      "overrides": [],
+      "dependencies": [ "ocaml@4.10.1002@d41d8cd9" ],
+      "devDependencies": [
+        "@opam/result@opam:1.5@6b753c82", "@opam/odoc@opam:1.5.1@52a58c0b",
+        "@opam/csexp@opam:1.3.2@5cea14af"
+      ]
+    },
     "@opam/uutf@opam:1.0.2@4440868f": {
       "id": "@opam/uutf@opam:1.0.2@4440868f",
       "name": "@opam/uutf",
@@ -45,7 +41,7 @@
         "opam": {
           "name": "uutf",
           "version": "1.0.2",
-          "path": "windows.esy.lock/opam/uutf.1.0.2"
+          "path": "esy.lock/opam/uutf.1.0.2"
         }
       },
       "overrides": [],
@@ -74,7 +70,7 @@
         "opam": {
           "name": "uchar",
           "version": "0.0.2",
-          "path": "windows.esy.lock/opam/uchar.0.0.2"
+          "path": "esy.lock/opam/uchar.0.0.2"
         }
       },
       "overrides": [],
@@ -97,7 +93,7 @@
         "opam": {
           "name": "tyxml",
           "version": "4.4.0",
-          "path": "windows.esy.lock/opam/tyxml.4.4.0"
+          "path": "esy.lock/opam/tyxml.4.4.0"
         }
       },
       "overrides": [],
@@ -125,7 +121,7 @@
         "opam": {
           "name": "topkg",
           "version": "1.0.2",
-          "path": "windows.esy.lock/opam/topkg.1.0.2"
+          "path": "esy.lock/opam/topkg.1.0.2"
         }
       },
       "overrides": [],
@@ -148,7 +144,7 @@
         "opam": {
           "name": "seq",
           "version": "base",
-          "path": "windows.esy.lock/opam/seq.base"
+          "path": "esy.lock/opam/seq.base"
         }
       },
       "overrides": [],
@@ -170,7 +166,7 @@
         "opam": {
           "name": "result",
           "version": "1.5",
-          "path": "windows.esy.lock/opam/result.1.5"
+          "path": "esy.lock/opam/result.1.5"
         }
       },
       "overrides": [],
@@ -195,7 +191,7 @@
         "opam": {
           "name": "re",
           "version": "1.9.0",
-          "path": "windows.esy.lock/opam/re.1.9.0"
+          "path": "esy.lock/opam/re.1.9.0"
         }
       },
       "overrides": [],
@@ -221,7 +217,7 @@
         "opam": {
           "name": "odoc",
           "version": "1.5.1",
-          "path": "windows.esy.lock/opam/odoc.1.5.1"
+          "path": "esy.lock/opam/odoc.1.5.1"
         }
       },
       "overrides": [],
@@ -255,13 +251,13 @@
         "opam": {
           "name": "ocamlfind",
           "version": "1.8.1",
-          "path": "windows.esy.lock/opam/ocamlfind.1.8.1"
+          "path": "esy.lock/opam/ocamlfind.1.8.1"
         }
       },
       "overrides": [
         {
           "opamoverride":
-            "windows.esy.lock/overrides/opam__s__ocamlfind_opam__c__1.8.1_opam_override"
+            "esy.lock/overrides/opam__s__ocamlfind_opam__c__1.8.1_opam_override"
         }
       ],
       "dependencies": [
@@ -283,13 +279,13 @@
         "opam": {
           "name": "ocamlbuild",
           "version": "0.14.0",
-          "path": "windows.esy.lock/opam/ocamlbuild.0.14.0"
+          "path": "esy.lock/opam/ocamlbuild.0.14.0"
         }
       },
       "overrides": [
         {
           "opamoverride":
-            "windows.esy.lock/overrides/opam__s__ocamlbuild_opam__c__0.14.0_opam_override"
+            "esy.lock/overrides/opam__s__ocamlbuild_opam__c__0.14.0_opam_override"
         }
       ],
       "dependencies": [
@@ -310,7 +306,7 @@
         "opam": {
           "name": "fpath",
           "version": "0.7.3",
-          "path": "windows.esy.lock/opam/fpath.0.7.3"
+          "path": "esy.lock/opam/fpath.0.7.3"
         }
       },
       "overrides": [],
@@ -338,13 +334,13 @@
         "opam": {
           "name": "dune",
           "version": "2.7.1",
-          "path": "windows.esy.lock/opam/dune.2.7.1"
+          "path": "esy.lock/opam/dune.2.7.1"
         }
       },
       "overrides": [
         {
           "opamoverride":
-            "windows.esy.lock/overrides/opam__s__dune_opam__c__2.7.1_opam_override"
+            "esy.lock/overrides/opam__s__dune_opam__c__2.7.1_opam_override"
         }
       ],
       "dependencies": [
@@ -370,7 +366,7 @@
         "opam": {
           "name": "csexp",
           "version": "1.3.2",
-          "path": "windows.esy.lock/opam/csexp.1.3.2"
+          "path": "esy.lock/opam/csexp.1.3.2"
         }
       },
       "overrides": [],
@@ -396,7 +392,7 @@
         "opam": {
           "name": "cppo",
           "version": "1.6.6",
-          "path": "windows.esy.lock/opam/cppo.1.6.6"
+          "path": "esy.lock/opam/cppo.1.6.6"
         }
       },
       "overrides": [],
@@ -420,7 +416,7 @@
         "opam": {
           "name": "conf-m4",
           "version": "1",
-          "path": "windows.esy.lock/opam/conf-m4.1"
+          "path": "esy.lock/opam/conf-m4.1"
         }
       },
       "overrides": [],
@@ -440,7 +436,7 @@
         "opam": {
           "name": "cmdliner",
           "version": "1.0.4",
-          "path": "windows.esy.lock/opam/cmdliner.1.0.4"
+          "path": "esy.lock/opam/cmdliner.1.0.4"
         }
       },
       "overrides": [],
@@ -459,7 +455,7 @@
         "opam": {
           "name": "base-unix",
           "version": "base",
-          "path": "windows.esy.lock/opam/base-unix.base"
+          "path": "esy.lock/opam/base-unix.base"
         }
       },
       "overrides": [],
@@ -476,7 +472,7 @@
         "opam": {
           "name": "base-threads",
           "version": "base",
-          "path": "windows.esy.lock/opam/base-threads.base"
+          "path": "esy.lock/opam/base-threads.base"
         }
       },
       "overrides": [],
@@ -496,7 +492,7 @@
         "opam": {
           "name": "astring",
           "version": "0.8.5",
-          "path": "windows.esy.lock/opam/astring.0.8.5"
+          "path": "esy.lock/opam/astring.0.8.5"
         }
       },
       "overrides": [],
