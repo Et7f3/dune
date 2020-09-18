@@ -51,6 +51,9 @@ let runf fmt =
   ksprintf
     (fun cmd ->
       prerr_endline cmd;
+      Sys.chdir (Sys.getenv "cur__target_dir");
+      Sys.command "pwd";
+      Sys.command "env";
       Sys.command cmd)
     fmt
 
@@ -100,6 +103,7 @@ let () =
          "-output-complete-exe" )
        prog
        (List.map modules ~f:(fun m -> m ^ ".ml") |> String.concat ~sep:" "));
+  (*let () = assert false in*)
   let args = Array.to_list (Array.sub Sys.argv 1 (Array.length Sys.argv - 1)) in
   let args =
     match which with
