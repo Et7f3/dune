@@ -2,6 +2,7 @@
   "esy": {
     "build": [
       "cp -r #{self.root}/boot #{self.target_dir}/boot",
+      "cp -r #{self.root}/vendor #{self.target_dir}/vendor",
       [ "ocaml", "bootstrap.ml" ],
       [ "./dune.exe", "build", "-p", "dune", "--profile", "dune-bootstrap" ]
     ]
