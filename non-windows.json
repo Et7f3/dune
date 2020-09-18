@@ -1,13 +1,13 @@
 {
   "esy": {
     "build": [
-      [ "ocaml", "bootstrap.ml" ],
-      [ "./dune.exe", "build", "-p", "dune", "--profile", "dune-bootstrap" ]
+      [ "echo", "ocaml", "bootstrap.ml" ],
+      [ "echo", "./dune.exe", "build", "-p", "dune", "--profile", "dune-bootstrap" ]
     ]
   },
   "scripts": {
-    "test": "#{self.bin / 'dune.exe'} runtest",
-    "doc": "make doc"
+    "test": "echo #{self.bin / 'dune.exe'} runtest",
+    "doc": "echo make doc"
   },
   "devDependencies": {
     "@opam/bisect_ppx": "*",

@@ -1,0 +1,18 @@
+{
+  "esy": {
+    "build": [
+      [ "echo", "ocaml", "bootstrap.ml" ],
+      [ "echo", "./dune.exe", "build", "-p", "dune", "--profile", "dune-bootstrap" ]
+    ]
+  },
+  "scripts": {
+    "test": "echo #{self.bin / 'dune.exe'} build @runtest-windows",
+    "doc": "echo make doc"
+  },
+  "devDependencies": {
+    "@opam/odoc": ">1.5.0",
+    "@opam/csexp": ">=1.3.0",
+    "@opam/result": "*"
+  },
+  "dependencies": { "ocaml": "<4.11" }
+}
