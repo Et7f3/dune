@@ -17,12 +17,12 @@ jobs:
         if: matrix.os == 'windows-latest'
         run: |
           cp windows.json esy.json
-          cp windows.esy.lock esy.lock
+          cp -r windows.esy.lock esy.lock
       - name: copy non-windows sandbox
         if: matrix.os != 'windows-latest'
         run: |
           cp non-windows.json esy.json
-          cp non-windows.esy.lock esy.lock
+          cp -r non-windows.esy.lock esy.lock
       - name: Install esy
         run: npm install -g esy
 
